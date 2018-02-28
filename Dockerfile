@@ -7,5 +7,5 @@ ADD db/ /db
 aDD trader.py /app
 ADD balance.py /app
 RUN pip install requests
-#CMD [ "/bin/sh", "screen" ]
-CMD [ "/bin/sh" ]
+RUN echo "shell /bin/bash" >> /etc/screenrc
+ENTRYPOINT [ "screen" ]
